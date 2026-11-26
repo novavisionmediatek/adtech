@@ -1,0 +1,25 @@
+# Settings with database and e-mail passwords - copy config.example.php to config.php
+config.php
+
+# Database, uploaded files and backups (personal data of students, parents and staff)
+data/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.sql.gz
+
+# Demo data dump (contains password hashes)
+database/vidyasetu_demo_data.sql
+
+# Local copies and upload packages
+design-backup/
+*.zip
+
+# Editor, system and log files
+.vscode/
+.idea/
+.claude/
+.env
+*.log
+Thumbs.db
+.DS_Store

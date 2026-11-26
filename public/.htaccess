@@ -1,0 +1,16 @@
+# Use this when the domain's document root points to the "public" folder (recommended).
+Options -Indexes
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# real files (css/js/images) are served directly; everything else goes to the front controller
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+</IfModule>
+
+# never expose hidden files
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
